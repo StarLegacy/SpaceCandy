@@ -1,0 +1,19 @@
+[
+  {
+    "modid": "starforge",
+    "name": "StarForge",
+    "description": "Optional visual enhancement and performance optimization Forge mod for Star Legacy (https://www.starlegacy.net) ",
+    "version": "${version}",
+    "url": "https://github.com/Miclebrick/StarForge",
+    "updateUrl": "https://github.com/Miclebrick/StarForge/releases",
+    "authorList": [
+      "MicleBrick"
+    ],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": [
+      ""
+    ]
+  }
+]
