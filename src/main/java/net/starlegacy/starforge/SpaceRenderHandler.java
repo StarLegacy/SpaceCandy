@@ -62,12 +62,14 @@ public class SpaceRenderHandler extends IRenderHandler {
         BufferBuilder bufferbuilder = tessellator.getBuffer();
         bufferbuilder.begin(GL_QUADS, DefaultVertexFormats.POSITION_COLOR);
         for (Star star : stars) {
-            Vector3d[] points = new Vector3d[] {
+            for (Vector3d point : new Vector3d[] {
                     calculatePoint(star, -star.size, -star.size),
                     calculatePoint(star, -star.size, +star.size),
                     calculatePoint(star, +star.size, +star.size),
                     calculatePoint(star, +star.size, -star.size),
-            };
+            }) {
+                bufferbuilder.pos(point.x, point.y, point.z).color(255, 255, 255, 255).endVertex();
+            }
         }
         tessellator.draw();
 
