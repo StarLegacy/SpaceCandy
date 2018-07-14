@@ -39,9 +39,8 @@ public class StarForge {
     }
 
     @SubscribeEvent
-    public void worldLoad(TickEvent.WorldTickEvent event) {
-        if(true) throw new RuntimeException("Event is being called");
-        World world = event.world;
+    public static void worldLoad(WorldEvent.Load event) {
+        World world = event.getWorld();
         if (world.isRemote && world.provider.getDimensionType() == DimensionType.THE_END)
             world.provider.setSkyRenderer(new SpaceRenderHandler(world));
     }
