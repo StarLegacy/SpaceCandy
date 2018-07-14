@@ -23,9 +23,11 @@ public class SpaceRenderHandler extends IRenderHandler {
     static {
         for (int i = 0; i < stars.length; i++) {
             Star star = new Star();
-            star.u = (float) (2 * Math.PI * random.nextFloat());
-            star.v = (float) Math.acos(2 * random.nextFloat() - 1);
-            star.size = 1 + random.nextFloat();
+            Vector3d point = randomSpherePoint(100);
+            star.x = point.x;
+            star.y = point.y;
+            star.z = point.z;
+            star.size = random.nextDouble();
             stars[i] = star;
         }
     }
@@ -60,16 +62,9 @@ public class SpaceRenderHandler extends IRenderHandler {
         GlStateManager.depthMask(false);
         Tessellator tessellator = Tessellator.getInstance();
         BufferBuilder bufferbuilder = tessellator.getBuffer();
-        bufferbuilder.begin(GL_QUADS, DefaultVertexFormats.POSITION_COLOR);
+        bufferbuilder.begin(GL_POINTS, DefaultVertexFormats.POSITION_COLOR);
         for (Star star : stars) {
-            for (Vector3d point : new Vector3d[] {
-                    calculatePoint(star, -star.size, -star.size),
-                    calculatePoint(star, -star.size, +star.size),
-                    calculatePoint(star, +star.size, +star.size),
-                    calculatePoint(star, +star.size, -star.size),
-            }) {
-                bufferbuilder.pos(point.x, point.y, point.z).color(255, 255, 255, 255).endVertex();
-            }
+            bufferbuilder.pos(star.x, star.y, star.z).color(255, 255, 255, 255).endVertex();
         }
         tessellator.draw();
 
@@ -78,19 +73,10 @@ public class SpaceRenderHandler extends IRenderHandler {
         GlStateManager.enableAlpha();
     }
 
-    private Vector3d calculatePoint(Star star, float du, float dv) {
-        float u = star.u + du;
-        float v = star.v + dv;
-        Vector3d vector3d = new Vector3d();
-        vector3d.x = (radius * Math.sin(v) * Math.cos(u));
-        vector3d.y = (radius * Math.sin(v) * Math.sin(u));
-        vector3d.z = (radius * Math.cos(v));
-        return vector3d;
-    }
-
     private static class Star {
-        public float u;
-        public float v;
-        public float size;
+        public double x;
+        public double y;
+        public double z;
+        public double size;
     }
 }
