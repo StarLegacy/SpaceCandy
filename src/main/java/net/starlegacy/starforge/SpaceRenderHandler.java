@@ -48,7 +48,6 @@ public class SpaceRenderHandler extends IRenderHandler {
             }
 
             if (i == 2) {
-//                GlStateManager.rotate(180.0F, 0.0F, 1.0F, 0.0F);
                 GlStateManager.rotate(-90.0F, 1.0F, 0.0F, 0.0F);
                 GlStateManager.rotate(180.0f, 0.0F, 1.0F, 0.0F);
             }
@@ -58,7 +57,6 @@ public class SpaceRenderHandler extends IRenderHandler {
             }
 
             if (i == 4) {
-//                GlStateManager.rotate(90.0F, 0.0F, 1.0F, 0.0F);
                 GlStateManager.rotate(90.0F, 0.0F, 0.0F, 1.0F);
                 GlStateManager.rotate(-90.0f, 0.0F, 1.0F, 0.0F);
             }
