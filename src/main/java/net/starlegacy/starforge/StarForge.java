@@ -22,7 +22,7 @@ import static net.minecraft.client.Minecraft.getMinecraft;
 @Mod(
         modid = "starforge",
         name = "StarForge",
-        version = "1.0.0"
+        version = "1.1.0"
 )
 @Mod.EventBusSubscriber
 public class StarForge {
