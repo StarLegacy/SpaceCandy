@@ -76,6 +76,10 @@ fabric.properties
 # Log file
 *.log
 
+*.ipr
+
+*.iml
+
 # BlueJ files
 *.ctxt
 
