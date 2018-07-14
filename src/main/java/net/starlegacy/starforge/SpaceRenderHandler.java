@@ -23,8 +23,8 @@ public class SpaceRenderHandler extends IRenderHandler {
     static {
         for (int i = 0; i < stars.length; i++) {
             Star star = new Star();
-            star.u = random.nextFloat();
-            star.v = random.nextFloat();
+            star.u = (float) (2 * Math.PI * random.nextFloat());
+            star.v = (float) Math.acos(2 * random.nextFloat() - 1);
             star.size = 1 + random.nextFloat();
             stars[i] = star;
         }
@@ -81,12 +81,10 @@ public class SpaceRenderHandler extends IRenderHandler {
     private Vector3d calculatePoint(Star star, float du, float dv) {
         float u = star.u + du;
         float v = star.v + dv;
-        double theta = 2 * Math.PI * u;
-        double phi = Math.acos(2 * v - 1);
         Vector3d vector3d = new Vector3d();
-        vector3d.x = (radius * Math.sin(phi) * Math.cos(theta));
-        vector3d.y = (radius * Math.sin(phi) * Math.sin(theta));
-        vector3d.z = (radius * Math.cos(phi));
+        vector3d.x = (radius * Math.sin(v) * Math.cos(u));
+        vector3d.y = (radius * Math.sin(v) * Math.sin(u));
+        vector3d.z = (radius * Math.cos(v));
         return vector3d;
     }
 
