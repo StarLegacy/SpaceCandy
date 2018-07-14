@@ -25,5 +25,6 @@ public class ParticleLaser extends Particle {
     @Override
     public void onUpdate() {
         if (particleAge++ >= particleMaxAge) setExpired();
+        particleScale = 0.5f;
     }
 }
