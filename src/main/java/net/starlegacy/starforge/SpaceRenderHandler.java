@@ -1,31 +1,53 @@
 package net.starlegacy.starforge;
 
-import io.netty.util.internal.MathUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.client.renderer.*;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
+import net.minecraft.world.gen.NoiseGeneratorSimplex;
 import net.minecraftforge.client.IRenderHandler;
-import org.lwjgl.util.vector.Quaternion;
+import org.lwjgl.opengl.GL11;
+
+import java.util.Random;
 
 import static net.minecraft.client.Minecraft.*;
+import static org.lwjgl.opengl.GL11.GL_POINTS;
+import static org.lwjgl.opengl.GL11.GL_QUADS;
 
 public class SpaceRenderHandler extends IRenderHandler {
+    private static Star[] stars = new Star[4096];
+    private static Random random = new Random(0);
+    private static final int radius = 100;
+
+    static {
+        for (int i = 0; i < stars.length; i++) {
+            Star star = new Star();
+            star.u = random.nextFloat();
+            star.v = random.nextFloat();
+            star.size = 1 + random.nextFloat();
+            stars[i] = star;
+        }
+    }
+
+    private static Vector3d randomSpherePoint(int radius) {
+        double u = random.nextFloat();
+        double v = random.nextFloat();
+        double theta = 2 * Math.PI * u;
+        double phi = Math.acos(2 * v - 1);
+        Vector3d vector3d = new Vector3d();
+        vector3d.x = (radius * Math.sin(phi) * Math.cos(theta));
+        vector3d.y = (radius * Math.sin(phi) * Math.sin(theta));
+        vector3d.z = (radius * Math.cos(phi));
+        return vector3d;
+    }
+
     private World world;
     private Minecraft mc;
-    private ResourceLocation[] SPACE_TEXTURES = new ResourceLocation[6];
 
     public SpaceRenderHandler(World world) {
         this.world = world;
         this.mc = getMinecraft();
-        SPACE_TEXTURES[0] = new ResourceLocation("starforge", "textures/environment/space_down.png");
-        SPACE_TEXTURES[1] = new ResourceLocation("starforge", "textures/environment/space_front.png");
-        SPACE_TEXTURES[2] = new ResourceLocation("starforge", "textures/environment/space_back.png");
-        SPACE_TEXTURES[3] = new ResourceLocation("starforge", "textures/environment/space_up.png");
-        SPACE_TEXTURES[4] = new ResourceLocation("starforge", "textures/environment/space_left.png");
-        SPACE_TEXTURES[5] = new ResourceLocation("starforge", "textures/environment/space_right.png");
     }
 
     @Override
@@ -38,47 +60,37 @@ public class SpaceRenderHandler extends IRenderHandler {
         GlStateManager.depthMask(false);
         Tessellator tessellator = Tessellator.getInstance();
         BufferBuilder bufferbuilder = tessellator.getBuffer();
-
-        for (int i = 0; i < 6; ++i) {
-            mc.renderEngine.bindTexture(SPACE_TEXTURES[i]);
-            GlStateManager.pushMatrix();
-
-            if (i == 1) {
-                GlStateManager.rotate(90.0F, 1.0F, 0.0F, 0.0F);
-            }
-
-            if (i == 2) {
-                GlStateManager.rotate(-90.0F, 1.0F, 0.0F, 0.0F);
-                GlStateManager.rotate(180.0f, 0.0F, 1.0F, 0.0F);
-            }
-
-            if (i == 3) {
-                GlStateManager.rotate(180.0F, 1.0F, 0.0F, 0.0F);
-            }
-
-            if (i == 4) {
-                GlStateManager.rotate(90.0F, 0.0F, 0.0F, 1.0F);
-                GlStateManager.rotate(-90.0f, 0.0F, 1.0F, 0.0F);
-            }
-
-            if (i == 5) {
-                GlStateManager.rotate(-90.0F, 0.0F, 0.0F, 1.0F);
-                GlStateManager.rotate(90.0f, 0.0F, 1.0F, 0.0F);
-            }
-
-            bufferbuilder.begin(7, DefaultVertexFormats.POSITION_TEX_COLOR);
-            double size = 100.0D;
-            bufferbuilder.pos(-size, -size, -size).tex(0.0D, 0.0D).color(255, 255, 255, 255).endVertex();
-            bufferbuilder.pos(-size, -size, size).tex(0.0D, 1).color(255, 255, 255, 255).endVertex();
-            bufferbuilder.pos(size, -size, size).tex(1, 1).color(255, 255, 255, 255).endVertex();
-            bufferbuilder.pos(size, -size, -size).tex(1, 0.0D).color(255, 255, 255, 255).endVertex();
-            tessellator.draw();
-            GlStateManager.popMatrix();
+        bufferbuilder.begin(GL_QUADS, DefaultVertexFormats.POSITION_COLOR);
+        for (Star star : stars) {
+            Vector3d[] points = new Vector3d[] {
+                    calculatePoint(star, -star.size, -star.size),
+                    calculatePoint(star, -star.size, +star.size),
+                    calculatePoint(star, +star.size, +star.size),
+                    calculatePoint(star, +star.size, -star.size),
+            };
         }
+        tessellator.draw();
 
         GlStateManager.depthMask(true);
         GlStateManager.enableTexture2D();
         GlStateManager.enableAlpha();
-        GlStateManager.enableAlpha();
+    }
+
+    private Vector3d calculatePoint(Star star, float du, float dv) {
+        float u = star.u + du;
+        float v = star.v + dv;
+        double theta = 2 * Math.PI * u;
+        double phi = Math.acos(2 * v - 1);
+        Vector3d vector3d = new Vector3d();
+        vector3d.x = (radius * Math.sin(phi) * Math.cos(theta));
+        vector3d.y = (radius * Math.sin(phi) * Math.sin(theta));
+        vector3d.z = (radius * Math.cos(phi));
+        return vector3d;
+    }
+
+    private static class Star {
+        public float u;
+        public float v;
+        public float size;
     }
 }
