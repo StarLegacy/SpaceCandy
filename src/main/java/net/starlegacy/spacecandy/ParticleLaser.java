@@ -1,4 +1,4 @@
-package net.starlegacy.starforge;
+package net.starlegacy.spacecandy;
 
 import net.minecraft.client.particle.Particle;
 import net.minecraft.world.World;
