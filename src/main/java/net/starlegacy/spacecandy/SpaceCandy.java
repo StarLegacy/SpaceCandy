@@ -1,4 +1,4 @@
-package net.starlegacy.starforge;
+package net.starlegacy.spacecandy;
 
 import net.minecraft.client.particle.IParticleFactory;
 import net.minecraft.client.particle.Particle;
@@ -20,12 +20,12 @@ import javax.annotation.Nullable;
 import static net.minecraft.client.Minecraft.getMinecraft;
 
 @Mod(
-        modid = "starforge",
-        name = "StarForge",
+        modid = "spacecandy",
+        name = "SpaceCandy",
         version = "1.2.0"
 )
 @Mod.EventBusSubscriber
-public class StarForge {
+public class SpaceCandy {
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
