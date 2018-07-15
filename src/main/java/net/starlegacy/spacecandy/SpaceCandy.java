@@ -2,18 +2,14 @@ package net.starlegacy.spacecandy;
 
 import net.minecraft.client.particle.IParticleFactory;
 import net.minecraft.client.particle.Particle;
-import net.minecraft.client.renderer.RenderGlobal;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.World;
-import net.minecraftforge.client.event.RenderWorldLastEvent;
 import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.gameevent.TickEvent;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nullable;
 
@@ -26,6 +22,13 @@ import static net.minecraft.client.Minecraft.getMinecraft;
 )
 @Mod.EventBusSubscriber
 public class SpaceCandy {
+
+    private static SpaceRenderHandler skyRenderer;
+
+    @Mod.EventHandler
+    public void init(FMLInitializationEvent event) {
+        skyRenderer = new SpaceRenderHandler();
+    }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
@@ -41,7 +44,8 @@ public class SpaceCandy {
     @SubscribeEvent
     public static void worldLoad(WorldEvent.Load event) {
         World world = event.getWorld();
-        if (world.isRemote && world.provider.getDimensionType() == DimensionType.THE_END)
-            world.provider.setSkyRenderer(new SpaceRenderHandler(world));
+        if (world.isRemote && world.provider.getDimensionType() == DimensionType.THE_END) {
+            world.provider.setSkyRenderer(skyRenderer);
+        }
     }
 }

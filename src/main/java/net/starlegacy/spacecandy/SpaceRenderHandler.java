@@ -22,15 +22,11 @@ import static org.lwjgl.opengl.GL11.GL_POINTS;
 import static org.lwjgl.opengl.GL11.GL_QUADS;
 
 public class SpaceRenderHandler extends IRenderHandler {
-    private World world;
-    private Minecraft mc;
 
     private static final int radius = 100;
     private Star[] stars = new Star[8000];
 
-    public SpaceRenderHandler(World world) {
-        this.world = world;
-        this.mc = getMinecraft();
+    SpaceRenderHandler() {
         generateStars();
     }
 
