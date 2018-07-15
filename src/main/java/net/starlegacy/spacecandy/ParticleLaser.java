@@ -4,7 +4,7 @@ import net.minecraft.client.particle.Particle;
 import net.minecraft.world.World;
 
 public class ParticleLaser extends Particle {
-    public ParticleLaser(World worldIn, double xCoordIn, double yCoordIn, double zCoordIn, double red, double green, double blue) {
+    ParticleLaser(World worldIn, double xCoordIn, double yCoordIn, double zCoordIn, double red, double green, double blue) {
         super(worldIn, xCoordIn, yCoordIn, zCoordIn, red, green, blue);
         this.motionX = 0;
         this.motionY = 0;
