@@ -34,7 +34,7 @@ public class SpaceRenderHandler extends IRenderHandler {
             Star star = new Star();
             double u = 2 * Math.PI * random.nextDouble();
             double v = Math.acos(1 - 2 * random.nextDouble()) - Math.PI * 0.5;
-            double size = (1 + 2 * random.nextDouble()) * .05;
+            double size = (1 + 2 * random.nextDouble()) * .055;
 
             // prevents aliasing artifacts, making small stars fainter but not smaller
             star.alpha = (int) (255 * (size > threshold ? 1 : (float) Math.min(size * (1 / threshold), 1)));
@@ -69,64 +69,41 @@ public class SpaceRenderHandler extends IRenderHandler {
 
         if (displayList > -1) GlStateManager.glDeleteLists(displayList, 1);
 
-        GlStateManager.glNewList(displayList = GLAllocation.generateDisplayLists(1), GL11.GL_COMPILE);
+        GlStateManager.glNewList(displayList = GLAllocation.generateDisplayLists(1), GL11.GL_COMPILE_AND_EXECUTE);
 
         Tessellator tess = Tessellator.getInstance();
         BufferBuilder buffer = tess.getBuffer();
 
-        renderStars(buffer, stars);
+        renderStars(tess, buffer, stars);
 
-        tess.draw();
         GlStateManager.glEndList();
     }
 
-    private static void renderStars(BufferBuilder buffer, Star[] stars) {
-        GlStateManager.disableFog();
-        GlStateManager.disableAlpha();
-        GlStateManager.enableBlend();
-        GlStateManager.disableTexture2D();
-        GlStateManager.tryBlendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
-        RenderHelper.disableStandardItemLighting();
-        GlStateManager.depthMask(false);
-        buffer.begin(GL_QUADS, POSITION_COLOR);
-        double k = 150;
-
-        for (Star star : stars)
-            for (Vector3d point : star.points)
-                buffer.pos(point.x, point.y, point.z).color(star.red, star.green, star.blue, star.alpha).endVertex();
-
+    private static void renderStars(Tessellator tess, BufferBuilder buffer, Star[] stars) {
         for (int i = 0; i < 6; i++) {
             GlStateManager.pushMatrix();
-
-            switch (i) {
-                case 1:
-                    GlStateManager.rotate(90.0F, 1.0F, 0.0F, 0.0F);
-                    break;
-                case 2:
-                    GlStateManager.rotate(-90.0F, 1.0F, 0.0F, 0.0F);
-                    break;
-                case 3:
-                    GlStateManager.rotate(180.0F, 1.0F, 0.0F, 0.0F);
-                    break;
-                case 4:
-                    GlStateManager.rotate(90.0F, 0.0F, 0.0F, 1.0F);
-                    break;
-                case 5:
-                    GlStateManager.rotate(-90.0F, 0.0F, 0.0F, 1.0F);
-                    break;
-            }
-
-            blackVertex(buffer, -k, -k, -k);
+            if (i == 1) GlStateManager.rotate(90.0F, 1.0F, 0.0F, 0.0F);
+            else if (i == 2) GlStateManager.rotate(-90.0F, 1.0F, 0.0F, 0.0F);
+            else if (i == 3) GlStateManager.rotate(180.0F, 1.0F, 0.0F, 0.0F);
+            else if (i == 4) GlStateManager.rotate(90.0F, 0.0F, 1.0F, 0.0F);
+            else if (i == 5) GlStateManager.rotate(-90.0F, 0.0F, 1.0F, 0.0F);
+            final double k = 110;
+            buffer.begin(GL_QUADS, POSITION_COLOR);
             blackVertex(buffer, -k, -k, k);
+            blackVertex(buffer, -k, k, k);
+            blackVertex(buffer, k, k, k);
             blackVertex(buffer, k, -k, k);
-            blackVertex(buffer, k, -k, -k);
+            tess.draw();
 
             GlStateManager.popMatrix();
         }
 
-        GlStateManager.depthMask(true);
-        GlStateManager.enableTexture2D();
-        GlStateManager.enableAlpha();
+        buffer.begin(GL_QUADS, POSITION_COLOR);
+
+        for (Star star : stars)
+            for (Vector3d point : star.points)
+                buffer.pos(point.x, point.y, point.z).color(star.red, star.green, star.blue, star.alpha).endVertex();
+        tess.draw();
     }
 
     private static void blackVertex(BufferBuilder buffer, double x, double y, double z) {
@@ -139,7 +116,19 @@ public class SpaceRenderHandler extends IRenderHandler {
 
     @Override
     public void render(float partialTicks, WorldClient world, Minecraft mc) {
+        GlStateManager.disableFog();
+        GlStateManager.disableAlpha();
+        GlStateManager.enableBlend();
+        GlStateManager.disableTexture2D();
+        GlStateManager.tryBlendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
+        RenderHelper.disableStandardItemLighting();
+        GlStateManager.depthMask(false);
+
         renderSkySpace();
+
+        GlStateManager.depthMask(true);
+        GlStateManager.enableTexture2D();
+        GlStateManager.enableAlpha();
     }
 
     private void renderSkySpace() {
