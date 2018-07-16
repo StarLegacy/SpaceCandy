@@ -3,9 +3,6 @@ package net.starlegacy.spacecandy;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.client.renderer.*;
-import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
-import net.minecraft.client.renderer.vertex.VertexBuffer;
-import net.minecraft.client.renderer.vertex.VertexFormat;
 import net.minecraftforge.client.IRenderHandler;
 import org.lwjgl.opengl.GL11;
 
@@ -14,23 +11,25 @@ import javax.vecmath.Vector3d;
 import java.util.Random;
 
 import static com.google.common.primitives.Ints.min;
-import static net.minecraft.client.renderer.vertex.DefaultVertexFormats.POSITION;
 import static net.minecraft.client.renderer.vertex.DefaultVertexFormats.POSITION_COLOR;
 import static org.lwjgl.opengl.GL11.GL_QUADS;
 
 public class SpaceRenderHandler extends IRenderHandler {
-    private Star[] stars = new Star[8192];
-    private int displayList = -1;
-
-    SpaceRenderHandler() {
-        generateStars();
+    private static class Star {
+        Vector3d[] points;
+        int alpha;
+        int red;
+        int green;
+        int blue;
     }
 
-    private void generateStars() {
+    private static int displayList = -1;
+
+    public static void generateStars() {
         final Random random = new Random(0);
         final int radius = 100;
         final double threshold = 0.15;
-
+        Star[] stars = new Star[8192];
         for (int i = 0; i < stars.length; i++) {
             Star star = new Star();
             double u = 2 * Math.PI * random.nextDouble();
@@ -68,22 +67,20 @@ public class SpaceRenderHandler extends IRenderHandler {
             stars[i] = star;
         }
 
-        buildStars();
-    }
+        if (displayList > -1) GlStateManager.glDeleteLists(displayList, 1);
 
-    private void buildStars() {
         GlStateManager.glNewList(displayList = GLAllocation.generateDisplayLists(1), GL11.GL_COMPILE);
 
         Tessellator tess = Tessellator.getInstance();
         BufferBuilder buffer = tess.getBuffer();
 
-        renderStars(buffer);
+        renderStars(buffer, stars);
 
         tess.draw();
         GlStateManager.glEndList();
     }
 
-    private void renderStars(BufferBuilder buffer) {
+    private static void renderStars(BufferBuilder buffer, Star[] stars) {
         GlStateManager.disableFog();
         GlStateManager.disableAlpha();
         GlStateManager.enableBlend();
@@ -93,6 +90,10 @@ public class SpaceRenderHandler extends IRenderHandler {
         GlStateManager.depthMask(false);
         buffer.begin(GL_QUADS, POSITION_COLOR);
         double k = 150;
+
+        for (Star star : stars)
+            for (Vector3d point : star.points)
+                buffer.pos(point.x, point.y, point.z).color(star.red, star.green, star.blue, star.alpha).endVertex();
 
         for (int i = 0; i < 6; i++) {
             GlStateManager.pushMatrix();
@@ -123,13 +124,17 @@ public class SpaceRenderHandler extends IRenderHandler {
             GlStateManager.popMatrix();
         }
 
-        for (Star star : stars)
-            for (Vector3d point : star.points)
-                buffer.pos(point.x, point.y, point.z).color(star.red, star.green, star.blue, star.alpha).endVertex();
-
         GlStateManager.depthMask(true);
         GlStateManager.enableTexture2D();
         GlStateManager.enableAlpha();
+    }
+
+    private static void blackVertex(BufferBuilder buffer, double x, double y, double z) {
+        buffer.pos(x, y, z).color(0, 0, 0, 255).endVertex();
+    }
+
+    public SpaceRenderHandler() {
+        generateStars();
     }
 
     @Override
@@ -138,19 +143,6 @@ public class SpaceRenderHandler extends IRenderHandler {
     }
 
     private void renderSkySpace() {
-
         GlStateManager.callList(displayList);
-    }
-
-    private void blackVertex(BufferBuilder buffer, double x, double y, double z) {
-        buffer.pos(x, y, z).color(0, 0, 0, 255).endVertex();
-    }
-
-    private static class Star {
-        Vector3d[] points;
-        int alpha;
-        int red;
-        int green;
-        int blue;
     }
 }

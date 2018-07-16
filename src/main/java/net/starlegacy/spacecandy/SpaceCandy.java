@@ -2,14 +2,21 @@ package net.starlegacy.spacecandy;
 
 import net.minecraft.client.particle.IParticleFactory;
 import net.minecraft.client.particle.Particle;
+import net.minecraft.command.CommandBase;
+import net.minecraft.command.CommandDebug;
+import net.minecraft.command.CommandException;
+import net.minecraft.command.ICommandSender;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.World;
+import net.minecraftforge.client.ClientCommandHandler;
 import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.starlegacy.spacecandy.command.CommandReloadStars;
 
 import javax.annotation.Nullable;
 
@@ -39,6 +46,8 @@ public class SpaceCandy {
                 return new ParticleLaser(worldIn, xCoordIn, yCoordIn, zCoordIn, xSpeedIn, ySpeedIn, zSpeedIn);
             }
         });
+
+        ClientCommandHandler.instance.registerCommand(new CommandReloadStars());
     }
 
     @SubscribeEvent
