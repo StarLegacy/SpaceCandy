@@ -25,7 +25,7 @@ import static net.minecraft.client.Minecraft.getMinecraft;
 @Mod(
         modid = "spacecandy",
         name = "SpaceCandy",
-        version = "1.2.0"
+        version = "1.3.0"
 )
 @Mod.EventBusSubscriber
 public class SpaceCandy {
