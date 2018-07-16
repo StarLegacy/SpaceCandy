@@ -35,7 +35,7 @@ public class SpaceRenderHandler extends IRenderHandler {
             Star star = new Star();
             double u = 2 * Math.PI * random.nextDouble();
             double v = Math.acos(1 - 2 * random.nextDouble()) - Math.PI * 0.5;
-            double size = (1 + 2 * random.nextDouble()) * .032;
+            double size = (1 + 2 * random.nextDouble()) * .05;
 
             // prevents aliasing artifacts, making small stars fainter but not smaller
             star.alpha = (int) (255 * (size > threshold ? 1 : (float) Math.min(size * (1 / threshold), 1)));
@@ -84,6 +84,13 @@ public class SpaceRenderHandler extends IRenderHandler {
     }
 
     private void renderStars(BufferBuilder buffer) {
+        GlStateManager.disableFog();
+        GlStateManager.disableAlpha();
+        GlStateManager.enableBlend();
+        GlStateManager.disableTexture2D();
+        GlStateManager.tryBlendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
+        RenderHelper.disableStandardItemLighting();
+        GlStateManager.depthMask(false);
         buffer.begin(GL_QUADS, POSITION_COLOR);
         double k = 150;
 
@@ -119,6 +126,10 @@ public class SpaceRenderHandler extends IRenderHandler {
         for (Star star : stars)
             for (Vector3d point : star.points)
                 buffer.pos(point.x, point.y, point.z).color(star.red, star.green, star.blue, star.alpha).endVertex();
+
+        GlStateManager.depthMask(true);
+        GlStateManager.enableTexture2D();
+        GlStateManager.enableAlpha();
     }
 
     @Override
@@ -127,19 +138,8 @@ public class SpaceRenderHandler extends IRenderHandler {
     }
 
     private void renderSkySpace() {
-        GlStateManager.disableFog();
-        GlStateManager.disableAlpha();
-        GlStateManager.enableBlend();
-        GlStateManager.disableTexture2D();
-        GlStateManager.tryBlendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
-        RenderHelper.disableStandardItemLighting();
-        GlStateManager.depthMask(false);
 
         GlStateManager.callList(displayList);
-
-        GlStateManager.depthMask(true);
-        GlStateManager.enableTexture2D();
-        GlStateManager.enableAlpha();
     }
 
     private void blackVertex(BufferBuilder buffer, double x, double y, double z) {
