@@ -53,8 +53,7 @@ public class SpaceCandy {
     @SubscribeEvent
     public static void worldLoad(WorldEvent.Load event) {
         World world = event.getWorld();
-        if (world.isRemote && world.provider.getDimensionType() == DimensionType.THE_END) {
+        if (world.isRemote && world.provider.getDimensionType() == DimensionType.THE_END)
             world.provider.setSkyRenderer(skyRenderer);
-        }
     }
 }
