@@ -1,0 +1,359 @@
+[12:29:39] [main/INFO]: Extra: [--mixin, mixins.spacecandy.json]
+[12:29:39] [main/INFO]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Micle/.gradle/caches/minecraft/assets, --assetIndex, 1.12, --accessToken{REDACTED}, --version, 1.12.2, --tweakClass, com.mumfrey.liteloader.launch.LiteLoaderTweaker, --mixin, mixins.spacecandy.json]
+[12:29:39] [main/INFO]: Initialising Yggdrasil authentication service with client token: fdf402e1-a70e-4865-ad1f-828e3cd0723d
+[12:29:39] [main/INFO]: Remaining login tries: 5
+[12:29:39] [main/INFO]: Attempting login, contacting Mojang auth servers...
+[12:29:39] [main/INFO]: Logging in with access token
+[12:29:40] [main/INFO]: LoginManager logged in successfully. Can play online = true
+[12:29:40] [main/INFO]: Launching game as MicleBrick
+[12:29:40] [main/INFO]: Loading tweak class name com.mumfrey.liteloader.launch.LiteLoaderTweaker
+[12:29:40] [main/INFO]: Using primary tweak class name com.mumfrey.liteloader.launch.LiteLoaderTweaker
+[12:29:40] [main/INFO]: Calling tweak class com.mumfrey.liteloader.launch.LiteLoaderTweaker
+[12:29:40] [main/INFO]: Bootstrapping LiteLoader 1.12.2
+[12:29:40] [main/INFO]: Registering API provider class com.mumfrey.liteloader.client.api.LiteLoaderCoreAPIClient
+[12:29:40] [main/INFO]: Spawning API provider class 'com.mumfrey.liteloader.client.api.LiteLoaderCoreAPIClient' ...
+[12:29:40] [main/INFO]: API provider class 'com.mumfrey.liteloader.client.api.LiteLoaderCoreAPIClient' provides API 'liteloader'
+[12:29:40] [main/INFO]: Initialising API 'liteloader' ...
+[12:29:40] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.7.4 Source=file:/C:/Users/Micle/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.7.4-SNAPSHOT/d22c5b223b3ff950cd165446dbc88afb162a8b6e/mixin-0.7.4-SNAPSHOT.jar Service=LaunchWrapper Env=CLIENT
+[12:29:40] [main/INFO]: FML platform manager could not load class cpw.mods.fml.relauncher.CoreModManager. Proceeding without FML support.
+[12:29:40] [main/INFO]: Compatibility level set to JAVA_8
+[12:29:40] [main/INFO]: LiteLoader begin PREINIT...
+[12:29:40] [main/INFO]: Initialising Loader properties...
+[12:29:40] [main/INFO]: Setting up logger...
+[12:29:40] [main/INFO]: LiteLoader 1.12.2 starting up...
+[12:29:40] [main/INFO]: Active Pack: 1.12.2-SNAPSHOT-r4CC2BB0-b4-4
+[12:29:40] [main/INFO]: Java reports OS="windows 10"
+[12:29:40] [main/INFO]: Adding supported mod class prefix 'LiteMod'
+[12:29:40] [main/INFO]: Enumerating class path...
+[12:29:40] [main/INFO]: Class path separator=";"
+[12:29:40] [main/INFO]: Class path entries=(
+   classpathEntry=C:\Program Files\Java\jdk1.8.0_181\jre\lib\charsets.jar
+   classpathEntry=C:\Program Files\Java\jdk1.8.0_181\jre\lib\deploy.jar
+   classpathEntry=C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\access-bridge-64.jar
+   classpathEntry=C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\cldrdata.jar
+   classpathEntry=C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\dnsns.jar
+   classpathEntry=C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\jaccess.jar
+   classpathEntry=C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\jfxrt.jar
+   classpathEntry=C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\localedata.jar
+   classpathEntry=C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\nashorn.jar
+   classpathEntry=C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\sunec.jar
+   classpathEntry=C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\sunjce_provider.jar
+   classpathEntry=C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\sunmscapi.jar
+   classpathEntry=C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\sunpkcs11.jar
+   classpathEntry=C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\zipfs.jar
+   classpathEntry=C:\Program Files\Java\jdk1.8.0_181\jre\lib\javaws.jar
+   classpathEntry=C:\Program Files\Java\jdk1.8.0_181\jre\lib\jce.jar
+   classpathEntry=C:\Program Files\Java\jdk1.8.0_181\jre\lib\jfr.jar
+   classpathEntry=C:\Program Files\Java\jdk1.8.0_181\jre\lib\jfxswt.jar
+   classpathEntry=C:\Program Files\Java\jdk1.8.0_181\jre\lib\jsse.jar
+   classpathEntry=C:\Program Files\Java\jdk1.8.0_181\jre\lib\management-agent.jar
+   classpathEntry=C:\Program Files\Java\jdk1.8.0_181\jre\lib\plugin.jar
+   classpathEntry=C:\Program Files\Java\jdk1.8.0_181\jre\lib\resources.jar
+   classpathEntry=C:\Program Files\Java\jdk1.8.0_181\jre\lib\rt.jar
+   classpathEntry=C:\Users\Micle\Documents\Code\StarLegacy\SpaceCandy\out\production\SpaceCandy
+   classpathEntry=C:\Users\Micle\.gradle\caches\minecraft\deobfedDeps\deobf\com\mumfrey\liteloader\1.12.2-SNAPSHOT\liteloader-1.12.2-SNAPSHOT.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\minecraft\deobfedDeps\deobf\org\ow2\asm\asm-debug-all\5.2\asm-debug-all-5.2.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\minecraft\deobfedDeps\compileDummy.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\minecraft\deobfedDeps\providedDummy.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\com.mojang\authlib\1.5.25\9834cdf236c22e84b946bba989e2f94ef5897c3c\authlib-1.5.25.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.1\f7be08ec23c21485b9b5a1cf1654c2ec8c58168d\jsr305-3.0.1.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\com.mojang\patchy\1.1\aef610b34a1be37fa851825f12372b78424d8903\patchy-1.1.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\oshi-project\oshi-core\1.1\9ddf7b048a8d701be231c0f4f95fd986198fd2d8\oshi-core-1.1.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\com.mojang\text2speech\1.10.3\48fd510879dff266c3815947de66e3d4809f8668\text2speech-1.10.3.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\ca.weblite\java-objc-bridge\1.0.0\6ef160c3133a78de015830860197602ca1c855d3\java-objc-bridge-1.0.0.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.dev.jna\jna\4.4.0\cb208278274bf12ebdb56c61bd7407e6f774d65a\jna-4.4.0.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.dev.jna\platform\3.4.0\e3f70017be8100d3d6923f50b3d2ee17714e9c13\platform-3.4.0.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\com.ibm.icu\icu4j-core-mojang\51.2\63d216a9311cca6be337c1e458e587f99d382b84\icu4j-core-mojang-51.2.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.minecraft\launchwrapper\1.12\111e7bea9c968cdb3d06ef4632bf7ff0824d0f36\launchwrapper-1.12.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.sf.jopt-simple\jopt-simple\5.0.3\cdd846cfc4e0f7eefafc02c0f5dce32b9303aa2a\jopt-simple-5.0.3.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\io.netty\netty-all\4.1.9.Final\97860965d6a0a6b98e7f569f3f966727b8db75\netty-all-4.1.9.Final.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\org.spongepowered\mixin\0.7.4-SNAPSHOT\d22c5b223b3ff950cd165446dbc88afb162a8b6e\mixin-0.7.4-SNAPSHOT.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\21.0\3a3d111be1be1b745edfa7d91678a12d7ed38709\guava-21.0.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.5\6c6c702c89bfff3cd9e80b04d668c5e190d588c6\commons-lang3-3.5.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\commons-io\commons-io\2.5\2852e6e05fbb95076fc091f6d1780f1f8fe35e0f\commons-io-2.5.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\com.mojang\realms\1.10.22\bd0dccebdf3744c75f1ca20063f16e8f7d5e663f\realms-1.10.22.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient\4.3.3\18f4247ff4572a074444572cee34647c43e7c9c7\httpclient-4.3.3.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\commons-codec\commons-codec\1.10\4b95f4897fa13f2cd904aee711aeafc0c5295cd8\commons-codec-1.10.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\com.paulscode\librarylwjglopenal\20100824\73e80d0794c39665aec3f62eee88ca91676674ef\librarylwjglopenal-20100824.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl_util\2.9.4-nightly-20150209\d51a7c040a721d13efdfbd34f8b257b2df882ad0\lwjgl_util-2.9.4-nightly-20150209.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl\2.9.4-nightly-20150209\697517568c68e78ae0b4544145af031c81082dfe\lwjgl-2.9.4-nightly-20150209.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jutils\jutils\1.0.0\e12fe1fda814bd348c1579329c86943d2cd3c6a6\jutils-1.0.0.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.8.0\c4ba5371a29ac9b2ad6129b1d39ea38750043eff\gson-2.8.0.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-compress\1.8.1\a698750c16740fd5b3871425f4cb3bbaa87f529d\commons-compress-1.8.1.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\commons-logging\commons-logging\1.1.3\f6f66e966c70a83ffbdb6f17a0919eaf7c8aca7f\commons-logging-1.1.3.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.3.2\31fbbff1ddbf98f3aa7377c94d33b0447c646b6e\httpcore-4.3.2.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\it.unimi.dsi\fastutil\7.1.0\9835253257524c1be7ab50c057aa2d418fb72082\fastutil-7.1.0.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-core\2.8.1\4ac28ff2f1ddf05dae3043a190451e8c46b73c31\log4j-core-2.8.1.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.8.1\e801d13612e22cad62a3f4f3fe7fdbe6334a8e72\log4j-api-2.8.1.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\com.paulscode\codecjorbis\20101023\c73b5636faf089d9f00e8732a829577de25237ee\codecjorbis-20101023.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\com.paulscode\codecwav\20101023\12f031cfe88fef5c1dd36c563c0a3a69bd7261da\codecwav-20101023.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\com.paulscode\libraryjavasound\20101123\5c5e304366f75f9eaa2e8cca546a1fb6109348b3\libraryjavasound-20101123.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\com.paulscode\soundsystem\20120107\419c05fe9be71f792b2d76cfc9b67f1ed0fec7f6\soundsystem-20120107.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-debug-all\5.0.3\f9e364ae2a66ce2a543012a4668856e84e5dab74\asm-debug-all-5.0.3.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\7ff832a6eb9ab6a767f1ade2b548092d0fa64795\jinput-platform-2.0.5-natives-linux.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\385ee093e01f587f30ee1c8a2ee7d408fd732e16\jinput-platform-2.0.5-natives-windows.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\53f9c919f34d2ca9de8c51fc4e1e8282029a9232\jinput-platform-2.0.5-natives-osx.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.4-nightly-20150209\b84d5102b9dbfabfeb5e43c7e2828d98a7fc80e0\lwjgl-platform-2.9.4-nightly-20150209-natives-windows.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.4-nightly-20150209\931074f46c795d2f7b30ed6395df5715cfd7675b\lwjgl-platform-2.9.4-nightly-20150209-natives-linux.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.4-nightly-20150209\bcab850f8f487c3f4c4dbabde778bb82bd1a40ed\lwjgl-platform-2.9.4-nightly-20150209-natives-osx.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\minecraft\net\minecraft\minecraft\1.12.2\snapshot\20180814\minecraftSrc-1.12.2.jar
+   classpathEntry=C:\Users\Micle\.gradle\caches\minecraft\net\minecraft\minecraft\1.12.2\start
+   classpathEntry=C:\Users\Micle\AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\182.4505.22\lib\idea_rt.jar
+   classpathEntry=C:\Users\Micle\AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\182.4505.22\plugins\Groovy\lib\agent\gragent.jar
+   classpathEntry=C:\Users\Micle\AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\182.4505.22\lib\rt\debugger-agent.jar
+)
+[12:29:40] [main/INFO]: Registering discovery module EnumeratorModuleClassPath: [<Java Class Path>]
+[12:29:40] [main/INFO]: Registering discovery module EnumeratorModuleFolder: [C:\Users\Micle\Documents\Code\StarLegacy\SpaceCandy\run\mods]
+[12:29:40] [main/INFO]: Registering discovery module EnumeratorModuleFolder: [C:\Users\Micle\Documents\Code\StarLegacy\SpaceCandy\run\mods\1.12.2]
+[12:29:40] [main/INFO]: Registering enumerator plugin DefaultEnumeratorPlugin: [com.mumfrey.liteloader.core.api.DefaultEnumeratorPlugin@6e9a10cd]
+[12:29:40] [main/INFO]: Discovering valid mod files in folder C:\Users\Micle\Documents\Code\StarLegacy\SpaceCandy\run\mods
+[12:29:40] [main/INFO]: Discovering valid mod files in folder C:\Users\Micle\Documents\Code\StarLegacy\SpaceCandy\run\mods\1.12.2
+[12:29:40] [main/INFO]: Discovering tweaks on class path...
+[12:29:41] [main/INFO]: Baking listener list for EnumerationObserver with 1 listeners
+[12:29:41] [main/INFO]: Registering discovered mod files in folder C:\Users\Micle\Documents\Code\StarLegacy\SpaceCandy\run\mods
+[12:29:41] [main/INFO]: Registering discovered mod files in folder C:\Users\Micle\Documents\Code\StarLegacy\SpaceCandy\run\mods\1.12.2
+[12:29:41] [main/INFO]: Initialising LiteLoader Mixins
+[12:29:41] [main/INFO]: LiteLoader PREINIT complete
+[12:29:41] [main/INFO]: Injecting required class transformer 'com.mumfrey.liteloader.transformers.event.EventProxyTransformer'
+[12:29:41] [main/INFO]: Remapping refMap mixins.liteloader.client.refmap.json using C:\Users\Micle\.gradle\caches\minecraft\de\oceanlabs\mcp\mcp_snapshot\20180814\1.12.2\srgs\srg-mcp.srg
+[12:29:41] [main/INFO]: Injecting required class transformer 'com.mumfrey.liteloader.launch.LiteLoaderTransformer'
+[12:29:41] [main/INFO]: Injecting required class transformer 'com.mumfrey.liteloader.client.transformers.CrashReportTransformer'
+[12:29:41] [main/INFO]: Queuing required class transformer 'com.mumfrey.liteloader.transformers.event.EventTransformer'
+[12:29:41] [main/INFO]: Queuing required class transformer 'com.mumfrey.liteloader.common.transformers.LiteLoaderPacketTransformer'
+[12:29:41] [main/INFO]: Queuing required class transformer 'com.mumfrey.liteloader.transformers.event.json.ModEventInjectionTransformer'
+[12:29:41] [main/INFO]: Loading tweak class name org.spongepowered.asm.launch.MixinTweaker
+[12:29:41] [main/INFO]: Loading tweak class name org.spongepowered.asm.mixin.EnvironmentStateTweaker
+[12:29:41] [main/INFO]: Loading tweak class name com.mumfrey.liteloader.launch.LiteLoaderTweaker$PreInitTweaker
+[12:29:41] [main/INFO]: Calling tweak class org.spongepowered.asm.launch.MixinTweaker
+[12:29:41] [main/INFO]: Calling tweak class org.spongepowered.asm.mixin.EnvironmentStateTweaker
+[12:29:41] [main/INFO]: Calling tweak class com.mumfrey.liteloader.launch.LiteLoaderTweaker$PreInitTweaker
+[12:29:41] [main/WARN]: Tweak class name org.spongepowered.asm.mixin.EnvironmentStateTweaker has already been visited -- skipping
+[12:29:41] [main/INFO]: Injecting downstream transformers
+[12:29:41] [main/INFO]: Injecting additional class transformer class 'com.mumfrey.liteloader.transformers.event.EventTransformer'
+[12:29:41] [main/WARN]: Reference map 'mixins.spacecandy.refmap.json' for mixins.spacecandy.json could not be read. If this is a development environment you can ignore this message
+[12:29:41] [main/INFO]: Remapping refMap mixins.liteloader.core.refmap.json using C:\Users\Micle\.gradle\caches\minecraft\de\oceanlabs\mcp\mcp_snapshot\20180814\1.12.2\srgs\srg-mcp.srg
+[12:29:41] [main/INFO]: Remapping refMap mixins.liteloader.client.refmap.json using C:\Users\Micle\.gradle\caches\minecraft\de\oceanlabs\mcp\mcp_snapshot\20180814\1.12.2\srgs\srg-mcp.srg
+[12:29:41] [main/INFO]: Remapping refMap mixins.liteloader.client.refmap.json using C:\Users\Micle\.gradle\caches\minecraft\de\oceanlabs\mcp\mcp_snapshot\20180814\1.12.2\srgs\srg-mcp.srg
+[12:29:41] [main/INFO]: Injecting additional class transformer class 'com.mumfrey.liteloader.common.transformers.LiteLoaderPacketTransformer'
+[12:29:42] [main/INFO]: Injecting additional class transformer class 'com.mumfrey.liteloader.transformers.event.json.ModEventInjectionTransformer'
+[12:29:42] [main/INFO]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[12:29:42] [main/INFO]: Setting user: MicleBrick
+[12:29:44] [main/WARN]: Skipping bad option: lastServer:
+[12:29:44] [main/INFO]: LWJGL Version: 2.9.4
+[12:29:45] [main/INFO]: Reloading ResourceManager: Default
+[12:29:50] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[12:29:50] [Thread-3/INFO]: Initializing LWJGL OpenAL
+[12:29:50] [Thread-3/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[12:29:51] [Thread-3/INFO]: OpenAL initialized.
+[12:29:51] [Sound Library Loader/INFO]: Sound engine started
+[12:29:55] [main/INFO]: Created: 1024x512 textures-atlas
+[12:29:57] [main/INFO]: JInput Component Registry is initialising...
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/ERROR]: The jar file C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar has a security seal for path net.java.games.input, but that path is defined and not secure
+[12:29:57] [main/INFO]: Inspecting Keyboard controller Standard PS/2 Keyboard on Unknown...
+[12:29:57] [main/INFO]: Inspecting Mouse controller HID-compliant mouse on Unknown...
+[12:29:57] [main/INFO]: Inspecting Unknown controller HIDI2C Device on Unknown...
+[12:29:57] [main/INFO]: JInput Component Registry initialised, found 3 controller(s) 119 component(s)
+[12:29:57] [main/INFO]: LiteLoader begin INIT...
+[12:29:57] [main/INFO]: Baking listener list for CoreProvider with 2 listeners
+[12:29:57] [main/INFO]: Injecting external mods into class path...
+[12:29:57] [main/INFO]: Injecting external mods into class path...
+[12:29:57] [main/INFO]: Discovering mods on class path...
+[12:29:57] [main/INFO]: Searching C:\Program Files\Java\jdk1.8.0_181\jre\lib\charsets.jar...
+[12:29:57] [main/INFO]: Searching C:\Program Files\Java\jdk1.8.0_181\jre\lib\deploy.jar...
+[12:29:57] [main/INFO]: Searching C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\access-bridge-64.jar...
+[12:29:57] [main/INFO]: Searching C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\cldrdata.jar...
+[12:29:57] [main/INFO]: Searching C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\dnsns.jar...
+[12:29:57] [main/INFO]: Searching C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\jaccess.jar...
+[12:29:57] [main/INFO]: Searching C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\jfxrt.jar...
+[12:29:57] [main/INFO]: Searching C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\localedata.jar...
+[12:29:57] [main/INFO]: Searching C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\nashorn.jar...
+[12:29:57] [main/INFO]: Searching C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\sunec.jar...
+[12:29:57] [main/INFO]: Searching C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\sunjce_provider.jar...
+[12:29:57] [main/INFO]: Searching C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\sunmscapi.jar...
+[12:29:57] [main/INFO]: Searching C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\sunpkcs11.jar...
+[12:29:57] [main/INFO]: Searching C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext\zipfs.jar...
+[12:29:57] [main/INFO]: Searching C:\Program Files\Java\jdk1.8.0_181\jre\lib\javaws.jar...
+[12:29:57] [main/INFO]: Searching C:\Program Files\Java\jdk1.8.0_181\jre\lib\jce.jar...
+[12:29:57] [main/INFO]: Searching C:\Program Files\Java\jdk1.8.0_181\jre\lib\jfr.jar...
+[12:29:57] [main/INFO]: Searching C:\Program Files\Java\jdk1.8.0_181\jre\lib\jfxswt.jar...
+[12:29:57] [main/INFO]: Searching C:\Program Files\Java\jdk1.8.0_181\jre\lib\jsse.jar...
+[12:29:57] [main/INFO]: Searching C:\Program Files\Java\jdk1.8.0_181\jre\lib\management-agent.jar...
+[12:29:57] [main/INFO]: Searching C:\Program Files\Java\jdk1.8.0_181\jre\lib\plugin.jar...
+[12:29:57] [main/INFO]: Searching C:\Program Files\Java\jdk1.8.0_181\jre\lib\resources.jar...
+[12:29:57] [main/INFO]: Searching C:\Program Files\Java\jdk1.8.0_181\jre\lib\rt.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\Documents\Code\StarLegacy\SpaceCandy\out\production\SpaceCandy...
+[12:29:57] [main/INFO]: Found 1 potential matches
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\minecraft\deobfedDeps\deobf\com\mumfrey\liteloader\1.12.2-SNAPSHOT\liteloader-1.12.2-SNAPSHOT.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\minecraft\deobfedDeps\deobf\org\ow2\asm\asm-debug-all\5.2\asm-debug-all-5.2.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\minecraft\deobfedDeps\compileDummy.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\minecraft\deobfedDeps\providedDummy.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\com.mojang\authlib\1.5.25\9834cdf236c22e84b946bba989e2f94ef5897c3c\authlib-1.5.25.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.1\f7be08ec23c21485b9b5a1cf1654c2ec8c58168d\jsr305-3.0.1.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\com.mojang\patchy\1.1\aef610b34a1be37fa851825f12372b78424d8903\patchy-1.1.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\oshi-project\oshi-core\1.1\9ddf7b048a8d701be231c0f4f95fd986198fd2d8\oshi-core-1.1.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\com.mojang\text2speech\1.10.3\48fd510879dff266c3815947de66e3d4809f8668\text2speech-1.10.3.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\ca.weblite\java-objc-bridge\1.0.0\6ef160c3133a78de015830860197602ca1c855d3\java-objc-bridge-1.0.0.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.dev.jna\jna\4.4.0\cb208278274bf12ebdb56c61bd7407e6f774d65a\jna-4.4.0.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.dev.jna\platform\3.4.0\e3f70017be8100d3d6923f50b3d2ee17714e9c13\platform-3.4.0.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\com.ibm.icu\icu4j-core-mojang\51.2\63d216a9311cca6be337c1e458e587f99d382b84\icu4j-core-mojang-51.2.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.minecraft\launchwrapper\1.12\111e7bea9c968cdb3d06ef4632bf7ff0824d0f36\launchwrapper-1.12.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.sf.jopt-simple\jopt-simple\5.0.3\cdd846cfc4e0f7eefafc02c0f5dce32b9303aa2a\jopt-simple-5.0.3.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\io.netty\netty-all\4.1.9.Final\97860965d6a0a6b98e7f569f3f966727b8db75\netty-all-4.1.9.Final.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\org.spongepowered\mixin\0.7.4-SNAPSHOT\d22c5b223b3ff950cd165446dbc88afb162a8b6e\mixin-0.7.4-SNAPSHOT.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\21.0\3a3d111be1be1b745edfa7d91678a12d7ed38709\guava-21.0.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.5\6c6c702c89bfff3cd9e80b04d668c5e190d588c6\commons-lang3-3.5.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\commons-io\commons-io\2.5\2852e6e05fbb95076fc091f6d1780f1f8fe35e0f\commons-io-2.5.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\com.mojang\realms\1.10.22\bd0dccebdf3744c75f1ca20063f16e8f7d5e663f\realms-1.10.22.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient\4.3.3\18f4247ff4572a074444572cee34647c43e7c9c7\httpclient-4.3.3.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\commons-codec\commons-codec\1.10\4b95f4897fa13f2cd904aee711aeafc0c5295cd8\commons-codec-1.10.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\com.paulscode\librarylwjglopenal\20100824\73e80d0794c39665aec3f62eee88ca91676674ef\librarylwjglopenal-20100824.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl_util\2.9.4-nightly-20150209\d51a7c040a721d13efdfbd34f8b257b2df882ad0\lwjgl_util-2.9.4-nightly-20150209.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl\2.9.4-nightly-20150209\697517568c68e78ae0b4544145af031c81082dfe\lwjgl-2.9.4-nightly-20150209.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jutils\jutils\1.0.0\e12fe1fda814bd348c1579329c86943d2cd3c6a6\jutils-1.0.0.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.8.0\c4ba5371a29ac9b2ad6129b1d39ea38750043eff\gson-2.8.0.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-compress\1.8.1\a698750c16740fd5b3871425f4cb3bbaa87f529d\commons-compress-1.8.1.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\commons-logging\commons-logging\1.1.3\f6f66e966c70a83ffbdb6f17a0919eaf7c8aca7f\commons-logging-1.1.3.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.3.2\31fbbff1ddbf98f3aa7377c94d33b0447c646b6e\httpcore-4.3.2.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\it.unimi.dsi\fastutil\7.1.0\9835253257524c1be7ab50c057aa2d418fb72082\fastutil-7.1.0.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-core\2.8.1\4ac28ff2f1ddf05dae3043a190451e8c46b73c31\log4j-core-2.8.1.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.8.1\e801d13612e22cad62a3f4f3fe7fdbe6334a8e72\log4j-api-2.8.1.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\com.paulscode\codecjorbis\20101023\c73b5636faf089d9f00e8732a829577de25237ee\codecjorbis-20101023.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\com.paulscode\codecwav\20101023\12f031cfe88fef5c1dd36c563c0a3a69bd7261da\codecwav-20101023.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\com.paulscode\libraryjavasound\20101123\5c5e304366f75f9eaa2e8cca546a1fb6109348b3\libraryjavasound-20101123.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\com.paulscode\soundsystem\20120107\419c05fe9be71f792b2d76cfc9b67f1ed0fec7f6\soundsystem-20120107.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-debug-all\5.0.3\f9e364ae2a66ce2a543012a4668856e84e5dab74\asm-debug-all-5.0.3.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\7ff832a6eb9ab6a767f1ade2b548092d0fa64795\jinput-platform-2.0.5-natives-linux.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\385ee093e01f587f30ee1c8a2ee7d408fd732e16\jinput-platform-2.0.5-natives-windows.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\53f9c919f34d2ca9de8c51fc4e1e8282029a9232\jinput-platform-2.0.5-natives-osx.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.4-nightly-20150209\b84d5102b9dbfabfeb5e43c7e2828d98a7fc80e0\lwjgl-platform-2.9.4-nightly-20150209-natives-windows.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.4-nightly-20150209\931074f46c795d2f7b30ed6395df5715cfd7675b\lwjgl-platform-2.9.4-nightly-20150209-natives-linux.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.4-nightly-20150209\bcab850f8f487c3f4c4dbabde778bb82bd1a40ed\lwjgl-platform-2.9.4-nightly-20150209-natives-osx.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\minecraft\net\minecraft\minecraft\1.12.2\snapshot\20180814\minecraftSrc-1.12.2.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\.gradle\caches\minecraft\net\minecraft\minecraft\1.12.2\start...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\182.4505.22\lib\idea_rt.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\182.4505.22\plugins\Groovy\lib\agent\gragent.jar...
+[12:29:57] [main/INFO]: Searching C:\Users\Micle\AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\182.4505.22\lib\rt\debugger-agent.jar...
+[12:29:57] [main/INFO]: Discovering mods in valid mod files...
+[12:29:57] [main/INFO]: Discovering mods in valid mod files...
+[12:29:57] [main/INFO]: Mod class discovery completed
+[12:29:57] [main/INFO]: LiteLoader begin POSTINIT...
+[12:29:57] [main/INFO]: Inhibiting sound handler reload
+[12:29:57] [main/INFO]: Registering interface provider com.mumfrey.liteloader.client.LiteLoaderEventBrokerClient for API LiteLoader core API
+[12:29:58] [main/INFO]: Registering interface provider com.mumfrey.liteloader.client.PacketEventsClient for API LiteLoader core API
+[12:29:58] [main/INFO]: Registering interface provider com.mumfrey.liteloader.client.ClientPluginChannelsClient for API LiteLoader core API
+[12:29:58] [main/INFO]: Registering interface provider com.mumfrey.liteloader.core.ServerPluginChannels for API LiteLoader core API
+[12:29:58] [main/INFO]: Registering interface provider com.mumfrey.liteloader.messaging.MessageBus for API LiteLoader core API
+[12:29:58] [main/INFO]: Discovered 1 total mod(s), injected 0 tweak(s)
+[12:29:58] [main/INFO]: Loading mod from net.starlegacy.spacecandy.LiteModSpaceCandy
+[12:29:58] [main/INFO]: Baking listener list for ModLoadObserver with 1 listeners
+[12:29:58] [main/INFO]: Successfully added mod SpaceCandy version 1.0-SNAPSHOT
+[12:29:58] [main/INFO]: Adding "C:\Users\Micle\Documents\Code\StarLegacy\SpaceCandy\out\production\SpaceCandy" to active resource pack set
+[12:29:58] [main/INFO]: Setting up "production/SpaceCandy" as mod resource pack with identifier "SpaceCandy"
+[12:29:58] [main/INFO]: Successfully added "C:\Users\Micle\Documents\Code\StarLegacy\SpaceCandy\out\production\SpaceCandy" to active resource pack set
+[12:29:58] [main/INFO]: Initialising mod SpaceCandy version 1.0-SNAPSHOT
+[12:29:58] [main/INFO]: Baking listener list for InterfaceObserver with 0 listeners
+[12:29:58] [main/INFO]: Narrator library for x64 successfully loaded
+[12:29:58] [main/INFO]: Reloading ResourceManager: Default, LiteLoader, SpaceCandy
+[12:29:59] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
+[12:30:03] [main/INFO]: Created: 1024x512 textures-atlas
+[12:30:04] [main/INFO]: Calling late init for mod SpaceCandy
+[12:30:04] [main/INFO]: Baking listener list for ViewportListener with 0 listeners
+[12:30:04] [main/INFO]: Sound handler reload inhibit removed
+[12:30:04] [main/INFO]: Reloading sound handler
+[12:30:08] [main/INFO]: SoundSystem shutting down...
+[12:30:08] [main/WARN]: Author: Paul Lamb, www.paulscode.com
+[12:30:08] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[12:30:09] [main/INFO]: Baking listener list for GameLoopListener with 0 listeners
+[12:30:09] [main/INFO]: Baking listener list for RenderListener with 0 listeners
+[12:30:09] [Thread-8/INFO]: Initializing LWJGL OpenAL
+[12:30:09] [Thread-8/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[12:30:09] [Thread-8/INFO]: OpenAL initialized.
+[12:30:09] [main/INFO]: Baking listener list for TickObserver with 3 listeners
+[12:30:09] [main/INFO]: Baking listener list for PostRenderObserver with 3 listeners
+[12:30:09] [main/INFO]: Baking listener list for Tickable with 0 listeners
+[12:30:09] [main/INFO]: Baking listener list for FrameBufferListener with 0 listeners
+[12:30:09] [Sound Library Loader/INFO]: Sound engine started
+[12:30:18] [Netty Client IO #0/INFO]: Generating new Event Handler Proxy Class com.mumfrey.liteloader.core.event.EventProxy
+[12:30:18] [Netty Client IO #0/INFO]: Successfully generated event handler proxy class with 124 handlers(s) and 124 total invocations
+[12:30:20] [main/INFO]: Connecting to mc.starlegacy.net., 25566
+[12:30:22] [Netty Client IO #2/INFO]: Baking listener list for PostLoginListener with 0 listeners
+[12:30:22] [main/INFO]: Baking listener list for ChatListener with 0 listeners
+[12:30:22] [main/INFO]: [CHAT] MicleBrick [+] (hub)
+[12:30:22] [main/INFO]: Baking listener list for PreJoinGameListener with 0 listeners
+[12:30:24] [main/INFO]: Baking listener list for JoinGameListener with 0 listeners
+[12:30:24] [main/INFO]: [CHAT] Vault 1.7.1 is out! You are running 1.6.6
+[12:30:24] [main/INFO]: [CHAT] Update Vault at: http://dev.bukkit.org/server-mods/vault
+[12:30:24] [main/INFO]: [CHAT] MicleBrick joined the game
+[12:30:24] [main/INFO]: Baking listener list for PreRenderListener with 0 listeners
+[12:30:25] [main/INFO]: Baking listener list for PostRenderListener with 0 listeners
+[12:30:25] [main/INFO]: Baking listener list for HUDRenderListener with 0 listeners
+[12:30:25] [main/INFO]: Baking listener list for ChatRenderListener with 0 listeners
+[12:30:25] [main/INFO]: Baking listener list for WorldObserver with 2 listeners
+[12:30:26] [main/INFO]: [CHAT] Welcome, MicleBrick!
+[12:30:26] [main/INFO]: [CHAT] Type /help for a list of commands.
+[12:30:26] [main/INFO]: [CHAT] Type /list to see who else is online.
+[12:30:26] [main/INFO]: [CHAT] Players online: 1 - World time: 5:35 AM
+[12:30:26] [main/INFO]: [CHAT] You have no new mail.
+[12:30:26] [main/INFO]: [CHAT] Set fly mode enabled for MicleBrick.
+[12:30:26] [main/INFO]: Loaded 120 advancements
+[12:30:26] [main/INFO]: [CHAT] [ViaVersion] There is a newer version available: 1.5.2, you're on: 1.4.1
+[12:30:27] [main/INFO]: Stopping!
+[12:30:27] [main/INFO]: SoundSystem shutting down...
+[12:30:28] [main/WARN]: Author: Paul Lamb, www.paulscode.com
