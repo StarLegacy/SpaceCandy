@@ -17,6 +17,10 @@ version = modVersion
 group = modGroup
 archivesBaseName = modBaseName
 
+jar {
+    manifest.attributes('FMLAT': 'spacecandy_at.cfg')
+}
+
 minecraft {
     version = project.forgeVersion
     runDir = "run"

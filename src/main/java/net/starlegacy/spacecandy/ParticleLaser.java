@@ -6,6 +6,7 @@ import net.minecraft.world.World;
 public class ParticleLaser extends Particle {
     ParticleLaser(World worldIn, double xCoordIn, double yCoordIn, double zCoordIn, double red, double green, double blue) {
         super(worldIn, xCoordIn, yCoordIn, zCoordIn, red, green, blue);
+
         this.motionX = 0;
         this.motionY = 0;
         this.motionZ = 0;
@@ -24,7 +25,10 @@ public class ParticleLaser extends Particle {
 
     @Override
     public void onUpdate() {
-        if (particleAge++ >= particleMaxAge) setExpired();
+        if (particleAge++ >= particleMaxAge) {
+            setExpired();
+        }
+
         particleScale = 0.5f;
     }
 }
