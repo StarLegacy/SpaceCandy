@@ -1,0 +1,17 @@
+[
+  {
+    "modid": "spacecandy",
+    "name": "Space Candy",
+    "description": "Optional visual enhancement and performance optimization Forge mod for Star Legacy (https://www.starlegacy.net) ",
+    "version": "${version}",
+    "url": "https://github.com/Miclebrick/SpaceCandy",
+    "updateUrl": "https://github.com/Miclebrick/SpaceCandy/releases",
+    "authorList": [
+      "MicleBrick",
+      "Contributors"
+    ],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": []
+  }
+]
