@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: net.minecraft:minecraftSrc:1.12.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraft/minecraft/1.12.2/stable/39/minecraftSrc-1.12.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraft/minecraft/1.12.2/stable/39/minecraftSrc-1.12.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
