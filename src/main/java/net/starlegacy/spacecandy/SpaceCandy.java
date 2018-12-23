@@ -16,8 +16,6 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.starlegacy.spacecandy.spacerenderer.ISpaceRenderer;
 import net.starlegacy.spacecandy.spacerenderer.SkyboxSpaceRenderer;
 
-import java.lang.reflect.Field;
-
 import static net.minecraft.client.Minecraft.getMinecraft;
 
 @Mod(modid = "spacecandy", name = "SpaceCandy", version = "3.0.0")
@@ -27,6 +25,7 @@ public class SpaceCandy {
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
+        DimensionType.THE_END.clazz = CandyWorldProvider.class;
         spaceRenderer = new SkyboxSpaceRenderer();
     }
 
@@ -49,27 +48,5 @@ public class SpaceCandy {
                 }
             });
         }
-    }
-
-    private static Field queuedLightChecksField;
-
-    static {
-        try {
-            queuedLightChecksField = Chunk.class.getDeclaredField("queuedLightChecks");
-            queuedLightChecksField.setAccessible(true);
-        } catch (NoSuchFieldException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    @SubscribeEvent
-    public static void onChunkLoad(ChunkEvent.Load event) {
-        Chunk chunk = event.getChunk();
-        try {
-            queuedLightChecksField.set(chunk, 4097);
-        } catch (IllegalAccessException e) {
-            throw new RuntimeException(e);
-        }
-        System.out.println("SNIPED [" + chunk.x + ", " + chunk.z + "]");
     }
 }
