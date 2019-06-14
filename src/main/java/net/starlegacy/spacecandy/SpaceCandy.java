@@ -2,6 +2,7 @@ package net.starlegacy.spacecandy;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.WorldClient;
+import net.minecraft.client.resources.LanguageManager;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.World;
@@ -15,6 +16,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.starlegacy.spacecandy.spacerenderer.ISpaceRenderer;
 import net.starlegacy.spacecandy.spacerenderer.SkyboxSpaceRenderer;
+import org.jline.utils.Log;
 
 import static net.minecraft.client.Minecraft.getMinecraft;
 
@@ -34,6 +36,8 @@ public class SpaceCandy {
         getMinecraft().effectRenderer.registerParticle(EnumParticleTypes.REDSTONE.getParticleID(),
                 (particleID, worldIn, xCoordIn, yCoordIn, zCoordIn, xSpeedIn, ySpeedIn, zSpeedIn, p_178902_15_) ->
                         new ParticleLaser(worldIn, xCoordIn, yCoordIn, zCoordIn, xSpeedIn, ySpeedIn, zSpeedIn));
+        getMinecraft().getLanguageManager().getLanguages().forEach(lang -> lang.bidirectional = true);
+        getMinecraft().fontRenderer.setBidiFlag(true);
     }
 
     @SubscribeEvent
@@ -48,5 +52,7 @@ public class SpaceCandy {
                 }
             });
         }
+
+        Log.info("BIDIRECTIONAL: " + getMinecraft().getLanguageManager().getCurrentLanguage().isBidirectional());
     }
 }
