@@ -20,7 +20,7 @@ import org.jline.utils.Log;
 
 import static net.minecraft.client.Minecraft.getMinecraft;
 
-@Mod(modid = "spacecandy", name = "SpaceCandy", version = "3.0.0")
+@Mod(modid = "spacecandy", name = "SpaceCandy", version = "3.0.1")
 @Mod.EventBusSubscriber
 public class SpaceCandy {
     private static ISpaceRenderer spaceRenderer;
